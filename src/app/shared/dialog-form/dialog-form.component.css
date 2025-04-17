@@ -1,0 +1,11 @@
+:host {
+    height: auto;
+    color: var(--quinary);
+    background-color: var(--popup);
+    padding: 2rem;
+    transition: transform 0.3s;
+    background-image: url('../../../../public/Draclroborous.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}

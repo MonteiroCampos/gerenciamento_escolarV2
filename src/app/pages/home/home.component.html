@@ -1,0 +1,33 @@
+<div class="home-container">
+    <header>
+        <h1>Home</h1>
+        <div class="action-buttons">
+            <button mat-raised-button color="primary" routerLink="/cursos">
+                Cursos
+            </button>
+            <button mat-raised-button color="accent" routerLink="/alunos">
+                Alunos
+            </button>
+        </div>
+    </header>
+
+    <section class="stats-section">
+        <div class="stat-card slide-in-blurred-top ">
+            <mat-icon>school</mat-icon>
+            <div class="stat-info">
+                <h3>{{cursos.length}}</h3>
+                <p>Cursos</p>
+            </div>
+        </div>
+        <div class="stat-card slide-in-blurred-top">
+            <mat-icon>person</mat-icon>
+            <div class="stat-info">
+                <h3>{{totalAlunos}}</h3>
+                <p>Alunos</p>
+            </div>
+        </div>
+    </section>
+
+
+
+</div>

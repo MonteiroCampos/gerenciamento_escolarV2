@@ -1,0 +1,78 @@
+<app-dialog-form>
+    <h2>Cadastrar Aluno</h2>
+ 
+    <form class="form" [formGroup]="form">
+        <mat-form-field class="example-full-width-nome">
+            <mat-label>Nome completo</mat-label>
+            <input matInput formControlName="nome">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-email">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-cursoid">
+            <mat-label>Curso Matriculado</mat-label>
+            <mat-select formControlName="cursoId">
+                @for (curso of cursos; track curso.id){
+                <mat-option [value]="curso.id">{{ curso.titulo }}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-matricula">
+            <mat-label>Matrícula</mat-label>
+            <input matInput formControlName="matricula">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-telefone">
+            <mat-label>Telefone</mat-label>
+            <input matInput formControlName="telefone">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-pais">
+            <mat-label>País</mat-label>
+            <input matInput formControlName="pais">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-estado">
+            <mat-label>Estado</mat-label>
+            <input matInput formControlName="estado">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-cep">
+            <mat-label>CEP</mat-label>
+            <input matInput formControlName="cep">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-numero">
+            <mat-label>N°</mat-label>
+            <input matInput formControlName="numero">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-bairro">
+            <mat-label>Bairro</mat-label>
+            <input matInput formControlName="bairro">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-cidade">
+            <mat-label>Cidade</mat-label>
+            <input matInput formControlName="cidade">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-rua">
+            <mat-label>Rua</mat-label>
+            <input matInput formControlName="rua">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width-imagem">
+            <mat-label>Imagem URL</mat-label>
+            <input matInput formControlName="imagemUrl">
+        </mat-form-field>
+    </form>
+    <div class="button-container">
+        <button mat-stroked-button (click)="dialog.close()">Cancelar</button>
+        <button mat-flat-button color="salvar" (click)="salvarAluno()">Salvar</button>
+    </div>
+</app-dialog-form>

@@ -1,0 +1,104 @@
+.cartao {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, var(--tertiary) 0%, rgb(12, 128, 120) 32%, rgb(0, 53, 50) 100%);
+    border-radius: 10px;
+    gap: 1rem;
+    margin: 1rem;
+  
+    .cartao-cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      color: var(--senary);
+  
+      span {
+        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--quinary);
+        text-align: center;
+        cursor: pointer;
+      }
+  
+      mat-icon {
+        color: var(--quinary);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  
+    .cartao-imagem {
+      width: 65%;
+      height: 10rem;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--senary);
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      cursor: pointer;
+  
+    }
+  
+    .cartao-detalhes {
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      
+      h2 {
+        font-size: 1.5rem;
+        color: var(--quinary);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin: 0.5rem;
+      }
+  
+      h3 {
+        color: var(--quinary);
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: lighter;
+      }
+  
+    }
+  }
+  
+  .slide-in-blurred-top {
+    animation: slide-in-blurred-top 0.8s cubic-bezier(0.215, 1, 0.355, 1.000) both;
+  }
+  
+  @keyframes slide-in-blurred-top {
+    0% {
+      transform: translateY(-200px) scaleY(1) scaleX(1);
+      transform-origin: 80% 80%;
+      filter: blur(20px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 0% 0%;
+      filter: blur(0);
+      opacity: 1;
+    }
+  
+  
+  
+  }
